@@ -12,15 +12,23 @@ public class Aluno {
     private double Nota_1B;
     private double Nota_2B;
     private double Nota_Final;
-    static int Qunatidade_de_Alunos = 50;
+    static int Qunatidade_de_Alunos;
 
+    public Aluno(){
+        
+    }
+    
     public Aluno(String Nome, String Curso, char Turma, int Periodo) {
         this.Nome = Nome;
         this.Curso = Curso;
         this.Turma = Turma;
         this.Periodo = Periodo;
         this.Qunatidade_de_Alunos++;
+        this.Criar_Mátricula();
         
+    }
+    
+    public void Criar_Mátricula() {
         LocalDate dataAtual = LocalDate.now();
         int anoAtual = dataAtual.getYear();
         
